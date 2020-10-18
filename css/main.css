@@ -1,0 +1,213 @@
+html {
+    scroll-behavior: smooth;
+}
+
+.header {
+    background-image: url('../images/homepage5.jpg');
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+
+.overlay {
+    position: absolute;
+    min-height: 100%;
+    min-width: 100%;
+    left: 0;
+    top: 0;
+    background: rgba(0, 0, 0, 0.6);
+}
+
+.description {
+    left: 50%;
+    position: absolute;
+    top: 45%;
+    transform: translate(-50%, -55%);
+    text-align: center;
+}
+.description h1 {
+    color: #6ab446;
+}
+.description p {
+    color: #fff;
+    font-size: 1.3rem;
+    line-height: 1.5;
+}
+
+.description button {
+    border:1px solid #6ab446;
+    background:#6ab446;
+    border-radius: 0;
+    color:#fff;
+}
+.description button:hover {
+    border:1px solid #fff;
+    background:#fff;
+    color:#000;
+}
+
+.features {
+    margin: 4em auto;
+    padding: 1em;
+    position: relative;
+}
+.feature-title {
+    color: #333;
+    font-size: 1.3rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+}
+.features img {
+    -webkit-box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.4);
+    -moz-box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.4);
+    box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.4);
+    margin-bottom: 16px;
+}
+
+.page-footer {
+    background-color: #222;
+    color: #ccc;
+    padding: 20px 0 20px;
+}
+.footer-copyright {
+    color: #666;
+    padding: 20px 0;
+}
+
+/*
+Custom style for go to top anchor
+ */
+#button {
+    display: inline-block;
+    background-color: #FF9800;
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    border-radius: 4px;
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    transition: background-color .3s,
+    opacity .5s, visibility .5s;
+    opacity: 0;
+    visibility: hidden;
+    z-index: 1000;
+}
+#button::after {
+    content: "\f077";
+    font-family: FontAwesome;
+    font-weight: normal;
+    font-style: normal;
+    font-size: 2em;
+    line-height: 50px;
+    color: #fff;
+}
+#button:hover {
+    cursor: pointer;
+    background-color: #333;
+}
+#button:active {
+    background-color: #555;
+}
+#button.show {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* Styles for the content section */
+
+.content {
+    width: 80%;
+    margin: 50px auto;
+    font-family: 'Merriweather', serif;
+    font-size: 17px;
+    color: #6c767a;
+    line-height: 1.9;
+}
+@media (min-width: 500px) {
+    .content {
+        width: 80%;
+    }
+    #button {
+        margin: 30px;
+    }
+}
+.content h2 {
+    margin-bottom: -10px;
+    color: #03a9f4;
+    line-height: 1.5;
+}
+.content h3 {
+    font-style: italic;
+    color: #96a2a7;
+}
+/*For About page */
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+}
+
+html {
+    box-sizing: border-box;
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+.column {
+    float: left;
+    width: 33.3%;
+    margin-bottom: 16px;
+    padding: 0 8px;
+}
+
+.card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    margin: 8px;
+}
+
+.about-section {
+    padding: 50px;
+    text-align: center;
+    background-color: #474e5d;
+    color: white;
+}
+
+.container {
+    padding: 0 16px;
+}
+
+.container::after, .row::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+.title {
+    color: grey;
+}
+
+.button {
+    border: none;
+    outline: 0;
+    display: inline-block;
+    padding: 8px;
+    color: white;
+    background-color: #000;
+    text-align: center;
+    cursor: pointer;
+    width: 100%;
+}
+
+.button:hover {
+    background-color: #555;
+}
+
+@media screen and (max-width: 650px) {
+    .column {
+        width: 100%;
+        display: block;
+    }
+}
