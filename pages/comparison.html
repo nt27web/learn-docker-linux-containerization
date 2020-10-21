@@ -40,10 +40,10 @@
     </div>
 </nav>
 
-<div>
+ <div>
     <div class="text-center">
         <div>
-            <img src="comparison.jpg" alt="inventionimage" style="horiz-align:center;width: 50%">
+            <img src="../comparison.jpg" alt="inventionimage" style="horiz-align:center;width: 50%">
         </div>
     </div>
     <div class="jumbotron text-center" style="horiz-align:center;width: 100%">
@@ -61,9 +61,10 @@
             are running within a virtualized platform nor aware that they are sharing resources with the other virtual
             machines.
         </p>
+        <div class="text-center">
         <div class=wp-block-image>
-            <img src="comparison1.jpg" alt=""/>
-        </div>
+            <img src="../comparison1.jpg" alt=""/>
+        </div></div>
         <p>The software that is vital for virtualization is called a hypervisor. A hypervisor can be hardware, software,
             or firmware-based. Essentially, it is a virtual layer that separates the physical server from the virtual
             machines and allows for multiple guest operating systems to run side by side within that system. The
@@ -88,7 +89,7 @@
             are not wasted on running separate operating systems tasks, containerization allows for a much quicker,
             lightweight deployment of applications. Each container image could be only a few megabytes in size, making
             it easier to share, migrate, and move. </p>
-        <img src="comparison2.png"
+        <img src="../comparison2.png"
              alt=vm-vs-containers
              sizes="(max-width: 1011px) 100vw, 1011px"/>
         <p>A container engine can easily manage large numbers of containers so we can create, add, and remove containers
@@ -168,36 +169,36 @@
             way, we can get the security and isolation of a virtual machine with the quick and lightweight setup of an
             application inside of a container.</p>
 
-            <table class="table">
-                <thead>
-                <tr>
-                    <th><strong>Virtualization</strong></th>
-                    <th><strong>Containerization</strong></th>
-                </tr>
-                </thead>
-                <tbody>
-                <tr>
-                    <td>More secure and fully isolated</td>
-                    <td>Less secure and isolated at the process level</td>
-                </tr>
-                <tr>
-                    <td>Heavyweight, high resource <br>usage</td>
-                    <td>Lightweight, less resource usage</td>
-                </tr>
-                <tr>
-                    <td>Hardware-level virtualization<br></td>
-                    <td>Operating system virtualization<br></td>
-                </tr>
-                <tr>
-                    <td>Each virtual machine runs in <br>its own operating system</td>
-                    <td>All containers share the host <br>operating system</td>
-                </tr>
-                <tr>
-                    <td>Startup time in minutes and slow provisioning</td>
-                    <td>Startup time in milliseconds and quicker provisioning</td>
-                </tr>
-                </tbody>
-            </table>
+        <table class="table">
+            <thead>
+            <tr>
+                <th><strong>Virtualization</strong></th>
+                <th><strong>Containerization</strong></th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>More secure and fully isolated</td>
+                <td>Less secure and isolated at the process level</td>
+            </tr>
+            <tr>
+                <td>Heavyweight, high resource <br>usage</td>
+                <td>Lightweight, less resource usage</td>
+            </tr>
+            <tr>
+                <td>Hardware-level virtualization<br></td>
+                <td>Operating system virtualization<br></td>
+            </tr>
+            <tr>
+                <td>Each virtual machine runs in <br>its own operating system</td>
+                <td>All containers share the host <br>operating system</td>
+            </tr>
+            <tr>
+                <td>Startup time in minutes and slow provisioning</td>
+                <td>Startup time in milliseconds and quicker provisioning</td>
+            </tr>
+            </tbody>
+        </table>
 
         <h2>Summary</h2>
         <p>To summarize, we can see that each technology serves a different purpose and that choosing one depends
@@ -206,32 +207,34 @@
             done carefully with these points in mind. To decide more efficiently, we can see a quick overview of the
             comparison in the table below.</p>
     </blockquote>
+</div>
 
-    <footer class="page-footer">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-8 col-md-8 col-sm-12">
-                    <h6 class="text-uppercase font-weight-bold">Additional Information</h6>
-                    <p></p>
-                    <p>This site was designed and developed by Nayana K and Sourav Halepalya Aswathnarayan
-                        <br/> as their masters assignment for the course Web development (IS-601)</p>
-                </div>
-                <div class="col-lg-4 col-md-4 col-sm-12">
-                    <h6 class="text-uppercase font-weight-bold">Contact</h6>
-                    <p>New Jersey Institute of Technology
-                        <br/>
-                        323 Dr Martin Luther King Jr Blvd, Newark, NJ 07102
-                        <br/>kwilliam@njit.edu
-                        <br/>+(973) 596-3000
-                    </p>
-                </div>
+
+<footer class="page-footer">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-md-8 col-sm-12">
+                <h6 class="text-uppercase font-weight-bold">Additional Information</h6>
+                <p></p>
+                <p>This site was designed and developed by Nayana K and Sourav Halepalya Aswathnarayan
+                    <br/> as their masters assignment for the course Web development (IS-601)</p>
             </div>
-            <div style="height: 20px"></div>
-            <div class="footer-copyright text-center">© 2020 Copyright:
-                <a href="https://github.com/nt27web/learn-docker-linux-containerization">https://github.com/nt27web/learn-docker-linux-containerization</a>
+            <div class="col-lg-4 col-md-4 col-sm-12">
+                <h6 class="text-uppercase font-weight-bold">Contact</h6>
+                <p>New Jersey Institute of Technology
+                    <br/>
+                    323 Dr Martin Luther King Jr Blvd, Newark, NJ 07102
+                    <br/>kwilliam@njit.edu
+                    <br/>+(973) 596-3000
+                </p>
             </div>
         </div>
-    </footer>
-</div>
+
+        <div class="footer-copyright text-center">© 2020 Copyright:
+            <a href="https://github.com/nt27web/learn-docker-linux-containerization">https://github.com/nt27web/learn-docker-linux-containerization</a>
+        </div>
+    </div>
+</footer>
+
 </body>
 </html>
