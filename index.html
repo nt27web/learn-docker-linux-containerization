@@ -9,12 +9,12 @@
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Merriweather:400,900,900i" rel="stylesheet">
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
-    <link href="../css/main.css" rel="stylesheet" type="text/css">
+    <link href="css/main.css" rel="stylesheet" type="text/css">
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-    <script src="../js/main.js"></script>
+    <script src="js/main.js"></script>
 
     <script>
         function navigateToPage(pageId) {
@@ -22,15 +22,17 @@
             var page = "";
             // decide on what page should be loaded based on the index of the carousel item.
             switch (pageId) {
-                case 0: page = "https://nt27web.github.io/nt27HowInternetWorks/pages/domainandICANN.html";
+                case 0: page = "https://nt27web.github.io/learn-docker-linux-containerization/pages/virtualization.html";
                     break;
-                case 1: page = "https://nt27web.github.io/nt27HowInternetWorks/pages/IPAddresses_Packets_Routing.html";
+                case 1: page = "https://nt27web.github.io/learn-docker-linux-containerization/pages/containerization.html";
                     break;
-                case 2: page = "https://nt27web.github.io/nt27HowInternetWorks/pages/DNS.html";
+                case 2: page = "https://nt27web.github.io/learn-docker-linux-containerization/pages/comparison.html";
                     break;
-                case 3: page = "https://nt27web.github.io/nt27HowInternetWorks/pages/http_https.html";
+                case 3: page = "https://nt27web.github.io/learn-docker-linux-containerization/pages/dockerwebserversetup.html";
                     break;
-                case 4: page = "https://nt27web.github.io/nt27HowInternetWorks/pages/w3c_html_css.html";
+                case 4: page = "https://nt27web.github.io/learn-docker-linux-containerization/pages/linux.html";
+                    break;
+                case 5: page = "https://nt27web.github.io/learn-docker-linux-containerization/pages/dockerandpycharm.html";
                     break;
                 default: alert("Page not found!");
             }
@@ -61,7 +63,7 @@
                     <a class="dropdown-item" href="pages/comparison.html">Comparison</a>
                     <a class="dropdown-item" href="pages/dockerwebserversetup.html">Docker Webserver Setup</a>
                     <a class="dropdown-item" href="pages/linux.html">Linux Basics</a>
-                    <a class="dropdown-item" href="pages/w3c_html_css.html">Docker Pycharm</a>
+                    <a class="dropdown-item" href="pages/dockerandpycharm.html">Docker Pycharm</a>
                 </div>
             </li>
             <li class="nav-item">
@@ -81,48 +83,48 @@
             <li data-target="#carouselExampleCaptions" data-slide-to="2"></li>
             <li data-target="#carouselExampleCaptions" data-slide-to="3"></li>
             <li data-target="#carouselExampleCaptions" data-slide-to="4"></li>
+            <li data-target="#carouselExampleCaptions" data-slide-to="5"></li>
         </ol>
         <div class="carousel-inner">
             <div class="carousel-item active">
                 <img src="images/virtualization-header.jpg" class="d-block w-100" alt="Virtualization" onclick="navigateToPage(0)">
                 <div class="carousel-caption d-none d-md-block">
-                    <h3>Virtualization</h3>
-                    <p>Virtualization is the process of running a virtual instance of a computer system in a layer abstracted from the actual hardware.</p>
+                    <h2>Virtualization</h2>
+                    <!--<p>Virtualization is the process of running a virtual instance of a computer system in a layer abstracted from the actual hardware.</p>-->
                 </div>
             </div>
             <div class="carousel-item">
                 <img src="images/containerization.jpg" class="d-block w-100" alt="Containerization" onclick="navigateToPage(1)">
                 <div class="carousel-caption d-none d-md-block">
-                    <h3>Containerization</h3>
-                    <p>Containerization is OS-based virtualization which creates multiple virtual units in the userspace, known as Containers.</p>
+                    <h2>Containerization</h2>
+                    <!--<p>Containerization is OS-based virtualization which creates multiple virtual units in the userspace, known as Containers.</p>-->
                 </div>
             </div>
             <div class="carousel-item">
-                <img src="images/DNS_edit.jpg" class="d-block w-100" alt="Comparison" onclick="navigateToPage(2)">
+                <img src="images/comparisonhomepage.jpg" class="d-block w-100" alt="Comparison" onclick="navigateToPage(2)">
                 <div class="carousel-caption d-none d-md-block">
-                    <h3>Comparison</h3>
-                    <p>Comparison between Virtualization and Containerization</p>
+                    <h2>Comparison</h2>
                 </div>
             </div>
             <div class="carousel-item">
-                <img src="images/https_edited.jpg" class="d-block w-100" alt="Docker Webserver Setup" onclick="navigateToPage(3)">
-                <div class="carousel-caption d-none d-md-block">
-                    <h3>Docker Webserver Setup</h3>
-                    <p>How to Setup a Simple Apache Web Server in a Docker Container</p>
+                <img src="images/homepagewebservers_edited.jpg" class="d-block w-100" alt="Docker Webserver Setup" onclick="navigateToPage(3)">
+                <div class="carousel-caption d-none d-md-block" style="color: #1b1e21">
+                    <h2>Docker Webserver Setup</h2>
+                    <!--<p>How to Setup a Simple Apache Web Server in a Docker Container</p>-->
                 </div>
             </div>
             <div class="carousel-item">
-                <img src="images/styling_edited.jpg" class="d-block w-100" alt="Linux Basics" onclick="navigateToPage(4)">
+                <img src="images/linuxhomepage.jpg" class="d-block w-100" alt="Linux Basics" onclick="navigateToPage(4)">
                 <div class="carousel-caption d-none d-md-block">
-                    <h3>Linux Basics</h3>
-                    <p>Linux kernel and application programs supports their installation on any kind of hardware platform. Open Source − Linux source code is freely available and it is community based development project.</p>
+                    <h2>Linux Basics</h2>
+                    <!--<p>Linux kernel and application programs supports their installation on any kind of hardware platform. Open Source − Linux source code is freely available and it is community based development project.</p>-->
                 </div>
             </div>
             <div class="carousel-item">
-                <img src="images/https_edited.jpg" class="d-block w-100" alt="Docker Pycharm" onclick="navigateToPage(3)">
+                <img src="images/pycharmhomepage.jpg" class="d-block w-100" alt="Docker Pycharm" onclick="navigateToPage(5)">
                 <div class="carousel-caption d-none d-md-block">
-                    <h3>Docker Pycharm</h3>
-                    <p>PyCharm integration with Docker allows you to run your applications in the variously configured development environments deployed in Docker containers.</p>
+                    <h2>Docker with Pycharm</h2>
+                    <!--<p>PyCharm integration with Docker allows you to run your applications in the variously configured development environments deployed in Docker containers.</p>-->
                 </div>
             </div>
         </div>
@@ -145,7 +147,7 @@
     <br/>
     <p><h4>Docker is the containerization platform which is used to package your application and all its dependencies</h4></p>
     <br>
-    <p class="text-info">Let's dive in for more details!! Use the Menu bar to navigate to different Topics.</p>
+    <p class="text-info"><b>Let's dive in for more details!! Use the Menu bar to navigate to different Topics.</b></p>
     <br>
 
 </div>
@@ -157,7 +159,7 @@
             <div class="col-lg-8 col-md-8 col-sm-12">
                 <h6 class="text-uppercase font-weight-bold">Additional Information</h6>
                 <p></p>
-                <p>This site was designed and developed by Nayana K Thakur
+                <p>This site was designed and developed by Nayana K Thakur and  Sourav Halepalya Aswathnarayan
                     <br/> as her masters assignment for the course Web development (IS-601)</p>
             </div>
             <div class="col-lg-4 col-md-4 col-sm-12">
