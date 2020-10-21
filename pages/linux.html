@@ -1,0 +1,405 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Home</title>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1" name="viewport">
+
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Merriweather:400,900,900i" rel="stylesheet">
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link href="../css/main.css" rel="stylesheet" type="text/css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="../js/main.js"></script>
+
+</head>
+
+<body>
+
+<!-- Back to top button -->
+<a id="button"></a>
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+                <a class="nav-link" href="../index.html">Home <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item dropdown">
+                <a aria-expanded="false" aria-haspopup="true" class="nav-link dropdown-toggle" data-toggle="dropdown"
+                   href="#"
+                   id="navbarDropdown" role="button">
+                    Topics
+                </a>
+                <div aria-labelledby="navbarDropdown" class="dropdown-menu">
+                    <a class="dropdown-item" href="pages/domainandICANN.html">Virtualization</a>
+                    <a class="dropdown-item" href="pages/IPAddresses_Packets_Routing.html">Containerization</a>
+                    <a class="dropdown-item" href="pages/DNS.html">Comparison</a>
+                    <a class="dropdown-item" href="pages/http_https.html">Docker Webserver Setup</a>
+                    <a class="dropdown-item" href="pages/w3c_html_css.html">Linux Basics</a>
+                    <a class="dropdown-item" href="pages/w3c_html_css.html">Docker Pycharm</a>
+                </div>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="about.html">About</a>
+            </li>
+        </ul>
+
+    </div>
+</nav>
+
+<div>
+
+    <div class="text-center">
+        <div>
+            <img src="../images/linux1.jpg" alt="linux" style="horiz-align:center;width: 50%">
+        </div>
+    </div>
+
+
+    <div class="jumbotron text-center" style="horiz-align:center;width: 100%">
+        <h1>Basic Linux commands and Docker container login</h1>
+    </div>
+
+    <div class="container" style="horiz-align:center;width: 100%;font-size: 20px">
+        <!-- <div class="row">-->
+
+        <div class="container">
+            <p>To open the terminal, press Ctrl+Alt+T in Ubuntu, or press Alt+F2, type in gnome-terminal, and press
+                enter. In Raspberry Pi, type in lxterminal. There is also a GUI way of taking it, but this is
+                better!</p>
+            <h3><i><b>Linux Commands<br><br></b></i></h3>
+            <p><b>Basic Commands</b></p>
+            <p><b>1. pwd</b> — When you first open the terminal, you are in the home directory of your user. To know
+                which directory you are in, you can use the <b>“pwd”</b> command. It gives us the absolute path, which
+                means the path that starts from the root. The root is the base of the Linux file system. It is denoted
+                by a forward slash( / ). The user directory is usually something like "/home/username".</p>
+        </div>
+        <br>
+        <div class="container">
+            <img src="https://maker.pro/storage/zY0aprE/zY0aprEyMtOxLhiyyRKWvY3vwB9cPJJQtxubemw6.png" alt="" style="">
+        </div>
+
+        <br>
+        <div class="container">
+
+            <p><b>2. ls&nbsp;</b>— Use the <b>"ls"</b> command to know what files are in the directory you are in. You
+                can see all the hidden files by using the command <b>“ls -a”</b>.</p>
+
+        </div>
+        <br>
+        <div class="container">
+            <img src="https://maker.pro/storage/NyJ4zSC/NyJ4zSCkkRu7x2IlvNeDpu9ea4Q7cWDxoB5vLJHk.png" alt=""
+                 style="">
+        </div>
+        <br>
+        <div class="container">
+
+            <p><b>3. cd</b> — Use the <b>"cd"</b> command to go to a directory. For example, if you are in the home
+                folder, and you want to go to the downloads folder, then you can type in <b>“cd Downloads”</b>.
+                Remember, this command is case sensitive, and you have to type in the name of the folder exactly as it
+                is. But there is a problem with these commands. Imagine you have a folder named “Raspberry Pi”. In this
+                case, when you type in <b>“cd Raspberry Pi”</b>, the shell will take the second argument of the command
+                as a different one, so you will get an error saying that the directory does not exist. Here, you can use
+                a backward slash. That is, you can use <b>“cd Raspberry\ Pi”</b> in this case. Spaces are denoted like
+                this: If you just type <b>“cd”</b> and press enter, it takes you to the home directory. To go back from
+                a folder to the folder before that, you can type “<b>cd</b> ..” . The two dots represent back.</p>
+
+        </div>
+        <br>
+        <div class="container">
+            <img src="https://maker.pro/storage/WAhryqs/WAhryqsvfDeEeyrO2eKIfIvca4C3hSTrSzWXmTFW.png" alt=""
+                 style="">
+        </div>
+        <br>
+        <div class="container">
+
+            <p><b>4. mkdir &amp; rmdir </b>— Use the <b>mkdir</b> command when you need to create a folder or a
+                directory. For example, if you want to make a directory called “DIY”, then you can type <b>“mkdir
+                    DIY</b>”. Remember, as told before, if you want to create a directory named “DIY Hacking”, then you
+                can type “mkdir <b>DIY\ Hacking</b>”. Use <b>rmdir</b> to delete a directory. But <b>rmdir</b> can only
+                be used to delete an empty directory. To delete a directory containing files, use <b>rm</b>.</p>
+
+        </div>
+        <br>
+        <div class="container">
+            <img src="https://maker.pro/storage/fZHiKDk/fZHiKDkI6X950pnqyFDNLUuVvXnCGE3W2LqLjN3w.png" alt=""
+                 style="">
+        </div>
+        <br>
+        <div class="container">
+
+            <p><b>5. rm</b> - Use the <b>rm</b> command to delete files and directories. &nbsp;Use "<b>rm -r</b>" to
+                delete just the directory. It deletes both the folder and the files it contains when using only&nbsp;the
+                <b>rm</b> command.<br></p>
+
+        </div>
+        <br>
+        <div class="container">
+            <img src="https://maker.pro/storage/TVtSlJ0/TVtSlJ0xCOT0TrjQCxdlznSErV7s8ip5D1uQaO29.png" alt=""
+                 style="">
+        </div>
+        <br>
+        <div class="container">
+            <p><b>6. touch</b> — The<b> touch</b> command is used to create a file. It can be anything, from an empty
+                txt file to an empty zip file. For example, “<b>touch new.txt</b>”.</p>
+        </div>
+        <br>
+        <div class="container">
+            <img src="https://maker.pro/storage/xQ2pP99/xQ2pP99oGhjN1fisLfllUSp3BYFne9Gt1hdBAvMX.png" alt=""
+                 style="">
+        </div>
+        <br>
+        <div class="container">
+
+            <p><b>7. man &amp; --help</b> — To know more about a command and how to use it, use the <b>man</b> command.
+                It shows the manual pages of the command. For example, “<b>man cd</b>” shows the manual pages of the <b>cd </b>command.
+                Typing in the command name and the argument helps it show which ways the command can be used (e.g., <b>cd
+                    –help</b>).</p>
+
+        </div>
+        <br>
+        <div class="container">
+            <img src="https://maker.pro/storage/Qxqv1yX/Qxqv1yXm9DdmwS11frqfVthgmSvGCBTwjf7YQ4kw.png" alt=""
+                 style="">
+        </div>
+        <br>
+        <div class="container">
+
+            <p><b>8. cp</b> — Use the <b>cp </b>command to copy files through the command line. It takes two arguments:
+                The first is the location of the file to be copied, the second is where to copy.</p>
+
+        </div>
+        <br>
+        <div class="container">
+            <img src="https://maker.pro/storage/r3Jci3Z/r3Jci3ZGSACziRezSh8vmHiATZ5rFqY8CtOcM4Aj.png" alt=""
+                 style="">
+        </div>
+        <br>
+        <div class="container">
+
+            <p><b>9. mv</b> — Use the <b>mv</b> command to move files through the command line. We can also use the <b>mv</b>
+                command to rename a file. For example, if we want to rename the file “<b>text</b>” to “<b>new</b>”, we
+                can use “<b>mv text new</b>”. It takes the two arguments, just like the<b> cp</b> command.</p>
+
+        </div>
+        <br>
+        <div class="container">
+            <img src="https://maker.pro/storage/XfrXwxx/XfrXwxxdZUV66PCQdcFLDMkxRw58i6fLGrjjNbcV.png" alt=""
+                 style="">
+        </div>
+        <br>
+        <div class="container">
+
+            <p><b>10. locate</b> — The <b>locate</b> command is used to locate a file in a Linux system, just like the
+                search command in Windows. This command is useful when you don't know where a file is saved or the
+                actual name of the file. Using the -i argument with the command helps to ignore the case (it doesn't
+                matter if it is uppercase or lowercase). So, if you want a file that has the word “hello”, it gives the
+                list of all the files in your Linux system containing the word "hello" when you type in “<b>locate -i
+                    hello</b>”. If you remember two words, you can separate them using an asterisk (*). For example, to
+                locate a file containing the words "hello" and "this", you can use the command “<b>locate -i
+                    *hello*this”.</b></p>
+
+        </div>
+        <br>
+        <div class="container">
+            <img src="https://maker.pro/storage/OLS3n8S/OLS3n8S30SLUxjlxdmIhd0bHnTc2q12Cy0gudkcU.png" alt=""
+                 style="">
+        </div>
+        <br>
+        <div class="container">
+
+            <p><b>Intermediate Commands</b></p>
+            <p><b>1. echo </b>— The "<b>echo</b>" command helps us move some data, usually text into a file. For
+                example, if you want to create a new text file or add to an already made text file, you just need to
+                type in, “<b>echo hello, my name is alok &gt;&gt; new.txt</b>”. You do not need to separate the spaces
+                by using the backward slash here, because we put in two triangular brackets when we finish what we need
+                to write.</p>
+            <p><b>2. cat </b>— Use the <b>cat</b> command to display the contents of a file. It is usually used to
+                easily view programs.</p>
+
+        </div>
+        <br>
+        <div class="container">
+            <img src="https://maker.pro/storage/gVDvnvr/gVDvnvrg4mkmFfoOwfKi5S5QaOo6g71LfokySbUf.png" alt=""
+                 style="">
+        </div>
+        <br>
+        <div class="container">
+
+            <p><b>3. nano, vi, jed — nano</b> and <b>vi</b> are already installed text editors in the Linux command
+                line. The <b>nano</b> command is a good text editor that denotes keywords with color and can recognize
+                most languages. And <b>vi</b> is simpler than <b>nano</b>. You can create a new file or modify a file
+                using this editor. For example, if you need to make a new file named <b>"check.txt</b>", you can create
+                it by using the command “<b>nano check.txt</b>”. You can save your files after editing by using the
+                sequence Ctrl+X, then Y (or N for no). In my experience, using <b>nano </b>for HTML editing doesn't seem
+                as good, because of its color, so I recommend <b>jed </b>text editor. We will come to installing
+                packages soon.</p>
+
+        </div>
+        <br>
+        <div class="container">
+            <img src="https://maker.pro/storage/6ILW5l3/6ILW5l3cJbunDa4PoZbp3xVLI1FLVCICfs5xCLVZ.png" alt=""
+                 style="">
+        </div>
+        <br>
+        <div class="container">
+
+            <p class=""><b>4. sudo</b> — A widely used command in the Linux command line, <b>sudo</b> stands for
+                "SuperUser Do". So, if you want any command to be done with administrative or root privileges, you can
+                use the <b>sudo</b> command. For example, if you want to edit a file like <b>viz. alsa-base.conf</b>,
+                which needs root permissions, you can use the command – <b>sudo nano alsa-base.conf</b>. You can enter
+                the root command line using the command “<b>sudo bash</b>”, then type in your user password. You can
+                also use the command “<b>su</b>” to do this, but you need to set a root password before that. For that,
+                you can use the command “<b>sudo passwd</b>”(not misspelled, it is <b>passwd</b>). Then type in the new
+                root password.</p>
+        </div>
+    </div>
+</div>
+<br>
+<div class="container">
+    <img src="https://maker.pro/storage/x87NGMW/x87NGMWw1Cx4b9pqDueExq1BCGRep9qhHTtTIKbF.jpeg" alt="" style="">
+</div>
+<br>
+<div class="container">
+
+    <p><b>5. df </b>— Use the <b>df </b>command to see the available disk space in each of the partitions in your
+        system. You can just type in <b>df</b> in the command line and you can see each mounted partition and their
+        used/available space in % and in KBs. If you want it shown in megabytes, you can use the command “<b>df -m</b>”.
+    </p>
+
+</div>
+<br>
+<div class="container">
+    <img src="https://maker.pro/storage/pWIgW4d/pWIgW4dtCD3Q4LGDzzL9zfZscTJRsiL3oXpstUn4.png" alt="" style="">
+</div>
+<br>
+<div class="container">
+
+    <p><b>6. du</b> — Use <b>du</b> to know the disk usage of a file in your system. If you want to know the disk usage
+        for a particular folder or file in Linux, you can type in the command <b>df</b> and the name of the folder or
+        file. For example, if you want to know the disk space used by the documents folder in Linux, you can use the
+        command “<b>du Documents</b>”. You can also use the command “<b>ls -lah</b>” to view the file sizes of all the
+        files in a folder.</p>
+
+</div>
+<br>
+<div class="container">
+    <img src="https://maker.pro/storage/ShrGn4Z/ShrGn4Zdt1uUxAL8ZBEIBdJaB6IFem1fUNgZ9LAI.png" alt="" style="">
+</div>
+<br>
+<div class="container">
+
+    <p><b>7. tar</b> — Use <b>tar</b> to work with tarballs (or files compressed in a tarball archive) in the Linux
+        command line. It has a long list of uses. It can be used to compress and uncompress different types of tar
+        archives like <b>.tar, .tar.gz, .tar.bz2</b>,etc. It works on the basis of the arguments given to it. For
+        example, "<b>tar -cvf</b>" for creating a <b>.tar</b> archive, -<b>xvf</b> to untar a tar archive, -<b>tvf</b>
+        to list the contents of the archive, etc. Since it is a wide topic, here are some <a
+                href="http://www.tecmint.com/18-tar-command-examples-in-linux/" target="_blank"
+                rel="noopener noreferrer">examples of tar commands</a>.</p>
+    <p><b>8. zip, unzip</b> — Use <b>zip</b> to compress files into a zip archive, and <b>unzip</b> to extract files
+        from a zip archive.</p>
+    <p><b>9. uname</b> — Use <b>uname</b> to show the information about the system your Linux distro is running. Using
+        the command “<b>uname -a</b>” prints most of the information about the system. This prints the kernel release
+        date, version, processor type, etc.</p>
+
+</div>
+<br>
+<div class="container">
+    <img src="https://maker.pro/storage/zYTWmQm/zYTWmQmaCRIQVP81pRAyGpsQMlODoWfAiBmhGGfx.png" alt="" style="">
+</div>
+<br>
+<div class="container">
+
+    <p><b>10. apt-get</b> — Use <b>apt</b> to work with packages in the Linux command line. Use <b>apt-get</b> to
+        install packages. This requires root privileges, so use the <b>sudo</b> command with it. For example, if you
+        want to install the text editor <b>jed</b> (as I mentioned earlier), we can type in the command “<b>sudo apt-get
+            install jed</b>”. Similarly, any packages can be installed like this. It is good to update your repository
+        each time you try to install a new package. You can do that by typing “<b>sudo apt-get update</b>”. You can
+        upgrade the system by typing “<b>sudo apt-get upgrade</b>”. We can also upgrade the distro by typing “<b>sudo
+            apt-get dist-upgrade</b>”. The command “<b>apt-cache search</b>” is used to search for a package. If you
+        want to search for one, you can type in “<b>apt-cache search jed</b>”(this doesn't require root).</p>
+
+</div>
+<br>
+<div class="container">
+    <img src="https://maker.pro/storage/kRl3J9p/kRl3J9prsTdwSLbn0a3Ib0PQ5bO2fQRXZN7Aqs4B.png" alt="" style="">
+</div>
+<br>
+<div class="container">
+
+    <p><b>11. chmod</b> — Use <b>chmod</b> to make a file executable and to change the permissions granted to it in
+        Linux. Imagine you have a python code named <b>numbers.py</b> in your computer. You'll need to run “<b>python
+            numbers.py</b>” every time you need to run it. Instead of that, when you make it executable, you'll just
+        need to run “<b>numbers.py</b>” in the terminal to run the file. To make a file executable, you can use the
+        command “<b>chmod +x numbers.py</b>” in this case. You can use “<b>chmod 755 numbers.py</b>” to give it root
+        permissions or “<b>sudo chmod +x numbers.py</b>” for root executable. Here is some more <a
+                href="http://www.computerhope.com/unix/uchmod.htm" target="_blank" rel="noopener noreferrer">information
+            about the chmod command</a>.</p>
+
+</div>
+<br>
+<div class="container">
+    <img src="https://maker.pro/storage/x6kPLV1/x6kPLV1X082T8Ndad9HXUcoUTfHqh3ZwdJeNMOWN.png" alt="" style="">
+</div>
+<br>
+<div class="container">
+
+    <p><b>12. hostname</b> — Use <b>hostname</b> to know your name in your host or network. Basically, it displays your
+        hostname and IP address. Just typing “<b>hostname</b>” gives the output. Typing in “<b>hostname -I</b>” gives
+        you your IP address in your network.</p>
+
+</div>
+<br>
+<div class="container">
+    <img src="https://maker.pro/storage/rYXwfkj/rYXwfkjzSMxuSpV8CeNvMze4kqJNIpw1QVcOT6eY.png" alt="" style="">
+</div>
+<br>
+<div class="container">
+
+    <p><b>13. ping</b> — Use <b>ping</b> to check your connection to a server. Wikipedia says, "<b>Ping</b> is a
+        computer network administration software utility used to test the reachability of a host on an Internet Protocol
+        (IP) network". Simply, when you type in, for example, “<b>ping google.com</b>”, it checks if it can connect to
+        the server and come back. It measures this round-trip time and gives you the details about it. The use of this
+        command for simple users like us is to check your internet connection. If it pings the Google server (in this
+        case), you can confirm that your internet connection is active!</p>
+
+</div>
+
+<div style="height: 30px"></div>
+
+<footer class="page-footer">
+    <br>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-md-8 col-sm-12">
+                <h6 class="text-uppercase font-weight-bold">Additional Information</h6>
+                <p></p>
+                <p>This site was designed and developed by Nayana K Thakur
+                    <br/> as her masters assignment for the course Web development (IS-601)</p>
+            </div>
+            <div class="col-lg-4 col-md-4 col-sm-12">
+                <h6 class="text-uppercase font-weight-bold">Contact</h6>
+                <p>New Jersey Institute of Technology
+                    <br/>
+                    323 Dr Martin Luther King Jr Blvd,
+                    <br/>
+                    Newark, NJ 07102
+                    <br/>
+                    kwilliam@njit.edu | +(973) 596-3000
+                </p>
+            </div>
+        </div>
+        <div class="footer-copyright text-center">&copy; 2020 Copyright:
+            <a href="https://nt27web.github.io/learn-docker-linux-containerization/">https://nt27web.github.io/learn-docker-linux-containerization/</a>
+        </div>
+    </div>
+</footer>
+<!-- </div>-->
+</div>
+</div>
+</body>
+</html>
