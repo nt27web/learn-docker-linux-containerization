@@ -2,7 +2,17 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="314c7529-db87-4233-aaab-99e444785c82" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/containerization.html" beforeDir="false" afterPath="$PROJECT_DIR$/containerization.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/comparison.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/comparison1.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/images/comparison1.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/comparison2.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/comparison2.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/containerization.html" beforeDir="false" afterPath="$PROJECT_DIR$/pages/containerization.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/containerization.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/containerization1.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/images/containerization1.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/comparison.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/images/comparison.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/containerization.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/images/containerization.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/comparison.html" beforeDir="false" afterPath="$PROJECT_DIR$/pages/comparison.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/virtualization.html" beforeDir="false" afterPath="$PROJECT_DIR$/pages/virtualization.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -19,7 +29,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="feature/virtualization" />
+        <entry key="$PROJECT_DIR$" value="feature/containerization" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -52,6 +62,8 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\sh667\PycharmProjects\learn-docker-linux-containerization\pages" />
+      <recent name="C:\Users\sh667\PycharmProjects\learn-docker-linux-containerization\images" />
       <recent name="C:\Users\sh667\PycharmProjects\learn-docker-linux-containerization" />
     </key>
   </component>
@@ -68,6 +80,7 @@
       <workItem from="1602992200871" duration="2436000" />
       <workItem from="1603027861714" duration="846000" />
       <workItem from="1603029315597" duration="5607000" />
+      <workItem from="1603245558336" duration="438000" />
     </task>
     <task id="LOCAL-00001" summary="adding the photos">
       <created>1602979840609</created>
@@ -104,7 +117,14 @@
       <option name="project" value="LOCAL" />
       <updated>1603053570852</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="task:arranging the files to there main dir">
+      <created>1603245847816</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1603245847816</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -126,24 +146,25 @@
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="adding the photos" />
     <MESSAGE value="building of the page virtualization" />
-    <option name="LAST_COMMIT_MESSAGE" value="building of the page virtualization" />
+    <MESSAGE value="task:arranging the files to there main dir" />
+    <option name="LAST_COMMIT_MESSAGE" value="task:arranging the files to there main dir" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="346" y="50" key="CommitChangelistDialog2" timestamp="1603053570181">
+    <state x="346" y="50" key="CommitChangelistDialog2" timestamp="1603245846707">
       <screen x="0" y="0" width="1504" height="963" />
     </state>
-    <state x="346" y="50" key="CommitChangelistDialog2/0.0.1504.963@0.0.1504.963" timestamp="1603053570181" />
+    <state x="346" y="50" key="CommitChangelistDialog2/0.0.1504.963@0.0.1504.963" timestamp="1603245846707" />
     <state x="144" y="78" key="DiffContextDialog" timestamp="1602991790579">
       <screen x="0" y="0" width="1504" height="963" />
     </state>
     <state x="144" y="78" key="DiffContextDialog/0.0.1504.963@0.0.1504.963" timestamp="1602991790579" />
-    <state x="533" y="236" key="FileChooserDialogImpl" timestamp="1603029252711">
+    <state x="533" y="236" key="FileChooserDialogImpl" timestamp="1603245553758">
       <screen x="0" y="0" width="1504" height="963" />
     </state>
-    <state x="533" y="236" key="FileChooserDialogImpl/0.0.1504.963@0.0.1504.963" timestamp="1603029252711" />
-    <state x="345" y="214" key="Vcs.Push.Dialog.v2" timestamp="1603054270265">
+    <state x="533" y="236" key="FileChooserDialogImpl/0.0.1504.963@0.0.1504.963" timestamp="1603245553758" />
+    <state x="345" y="214" key="Vcs.Push.Dialog.v2" timestamp="1603245860185">
       <screen x="0" y="0" width="1504" height="963" />
     </state>
-    <state x="345" y="214" key="Vcs.Push.Dialog.v2/0.0.1504.963@0.0.1504.963" timestamp="1603054270265" />
+    <state x="345" y="214" key="Vcs.Push.Dialog.v2/0.0.1504.963@0.0.1504.963" timestamp="1603245860185" />
   </component>
 </project>
