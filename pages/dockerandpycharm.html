@@ -25,7 +25,8 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav mr-auto">
             <li class="nav-item active">
-                <a class="nav-link" href="https://nt27web.github.io/learn-docker-linux-containerization/">Home <span class="sr-only">(current)</span></a>
+                <a class="nav-link" href="https://nt27web.github.io/learn-docker-linux-containerization/">Home <span
+                        class="sr-only">(current)</span></a>
             </li>
             <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="../index.html" id="navbarDropdown" role="button"
@@ -39,7 +40,7 @@
                     <a class="dropdown-item" href="../pages/comparison.html">Comparison</a>
                     <a class="dropdown-item" href="../pages/dockerwebserversetup.html">Docker Webserver Setup</a>
                     <a class="dropdown-item" href="../pages/linux.html">Linux Basics</a>
-                    <a class="dropdown-item" href="../pages/w3c_html_css.html">Docker Pycharm</a>
+                    <a class="dropdown-item" href="../pages/dockerandpycharm.html">Docker Pycharm</a>
                 </div>
             </li>
             <li class="nav-item">
@@ -54,154 +55,89 @@
 
     <div class="text-center">
         <div>
-            <img src="../images/dockerwebserversetup.jpg" alt="dockerwebserversetup"
+            <img src="../images/dockerandpython.png" alt="dockerandpython"
                  style="horiz-align:center;width: 50%">
         </div>
     </div>
 
 
     <div class="jumbotron text-center" style="horiz-align:center;width: 100%">
-        <h1>Web server setup using Docker</h1>
+        <h1>Docker with PyCharm</h1>
     </div>
 
     <div class="container" style="horiz-align:center;width: 100%;font-size: 20px">
-        <div class="row">
-            <h1>Docker</h1>
-            <p>
-                is a container management service. The keywords of Docker are <b>develop</b>, <b>ship</b> and <b>run</b>
-                anywhere.
-                The whole idea of Docker is for developers to easily develop applications, ship them into containers
-                which can then be deployed anywhere.
-                The initial release of Docker was in March 2013 and since then, it has become the buzzword for
-                modern world development, especially in the face of Agile-based projects.
-            </p>
-            <br>
 
-            <h4><b>Docker Features</b></h4>
-            <div>
-                <ul>
-                    <li>Docker could reduce the size of development by providing a smaller footprint of the operating
-                        system via containers.
-                    </li>
-                    <li>With containers, it becomes easier for teams across different units, such as development, QA,
-                        and Operations to work seamlessly across applications.
-                    </li>
-                    <li>You can deploy Docker containers anywhere, on any physical and virtual machines and even on the
-                        cloud.
-                    </li>
-                    <li>Since Docker containers are lightweight, they are very easily scalable.</li>
-                </ul>
-            </div>
-
-            <div>
-                <h4><b>Docker Components</b></h4>
-                <ul>
-                    <li><b>Docker for Mac</b> − It allows one to run Docker containers on the Mac OS.</li>
-                    <li><b>Docker for Linux</b> − It allows one to run Docker containers on the Linux OS.</li>
-                    <li><b>Docker for Windows</b> − It allows one to run Docker containers on the Windows OS.</li>
-                    <li><b>Docker Engine</b> − It is used for building Docker images and creating Docker containers.
-                    </li>
-                    <li><b>Docker Hub</b> − This is the registry which is used to host various Docker images.</li>
-                    <li><b>Docker Compose</b> − This is used to define applications using multiple Docker containers.
-                    </li>
-                </ul>
-            </div>
-
-            <h1>How to build a web server image which can be used to build containers:</h1>
-            <p>
-                In our example, we are going to use the Apache Web Server on Ubuntu to build our image. Let us follow
-                the steps given below, to build our web server Docker file.
-                <br>
-                <b>Step 1</b> − The first step is to build our Docker File. Let us use vim and create a Docker File with
-                the
-                following information.
-            </p>
-            <br>
-
-            <div style="background: #c6c8ca; width: 100%;font-family: 'Courier New';font-size: 18px; ">
-                <pre>
-                    <code>
-            FROM ubuntu
-            RUN apt-get update
-            RUN apt-get install –y apache2
-            RUN apt-get install –y apache2-utils
-            RUN apt-get clean
-            EXPOSE 80 CMD [“apache2ctl”, “-D”, “FOREGROUND”]
-                    </code>
-                </pre>
-
-            </div>
-            <p>
-            <ul>
-                The following points need to be noted about the above statements −
-                <li> We are first creating our image to be from the Ubuntu base image.</li>
-                <li>Next, we are going to use the RUN command to update all the packages on the Ubuntu system.</li>
-                <li>Next, we use the RUN command to install apache2 on our image.</li>
-                <li> Next, we use the RUN command to install the necessary utility apache2 packages on our image.</li>
-                <li>Next, we use the RUN command to clean any unnecessary files from the system.</li>
-                <li>The EXPOSE command is used to expose port 80 of Apache in the container to the Docker host.</li>
-                <li>Finally, the CMD command is used to run apache2 in the background.</li>
-
-            </ul>
-            </p>
-        </div>
-
+        <h1>What is Pycharm</h1>
         <div>
-            <img src="../images/dockerwebserversetup2.jpg" alt="dockerwebserversetup2">
+            <img src="../images/pycharm.jpg" alt="docker run configuration">
         </div>
+        <p>
+            <b>PyCharm</b> is an <b>I</b>ntegrated <b>D</b>evelopment <b>E</b>nvironment (IDE) used in computer programming, specifically for
+            the <b>Python</b> language. It is developed by the Czech company <b>JetBrains</b>.
+            It provides code analysis, a graphical debugger, an integrated unit tester, integration with version control systems (VCSes), and
+            supports web development with Django as well as data science with Anaconda.
+            PyCharm is cross-platform, with Windows, macOS and Linux versions. The Community Edition is released
+            under the <i>Apache License</i>, and there is also Professional Edition with extra features – released under
+            a proprietary license.
 
-        <p>Now that the file details have been entered, just save the file.</p>
+        </p>
 
-        <p><b>Step 2</b>− Run the Docker build command to build the Docker file. It can be done using the following
-            command −</p>
-
-        <div>
-            <div style="background: #c6c8ca; width: 100%;font-family: 'Courier New';font-size: 18px; ">
-        <pre>
-            <code>
-            sudo docker build –t=”mywebserver” .
-            </code>
-        </pre>
-            </div>
-
-            <p>We are tagging our image as <b>mywebserver</b>. Once the image is built, you will get a successful
-                message that the file has been built.</p>
-
-            <div>
-                <img src="../images/dockerwebserversetup3.jpg" alt="dockerwebserversetup3">
-            </div>
-            <br>
-            <p><b>Step 3</b>− Now that the web server file has been built, it’s now time to create a container from the
-                image. We can do this with the Docker <b>run</b> command. </p>
-
-            <div>
-                <div style="background: #c6c8ca; width: 100%;font-family: 'Courier New';font-size: 18px; ">
+        <h1>Getting started guide</h1>
+        <h4>1. Creating the python script</h4>
+        <p>
+            Open PyCharm and create a folder named <code>‘src’</code>
+            Create a file under <code>‘src’</code> folder named <code>my_script.py</code> and add the below lines
+        <div style="background: #c6c8ca; width: 100%;font-family: 'Courier New';font-size: 18px; ">
             <pre>
-                <code>
-            sudo docker run –d –p 80:80 mywebserver
+            <code>
+        # Sample taken from pyStrich GitHub repository
+        # https://github.com/mmulqueen/pyStrich
+        from pystrich.datamatrix import DataMatrixEncoder
+
+        encoder = DataMatrixEncoder('This is a DataMatrix.')
+        encoder.save('./datamatrix_test.png')
+        print(encoder.get_ascii())
                 </code>
             </pre>
-                </div>
-            </div>
-
-            <div>
-                <img src="../images/dockerwebserversetup4.jpg" alt="dockerwebserversetup4">
-            </div>
-            <br>
-            <p>
-                The following points need to be noted about the above command −
-                <ul>
-                <li>The port number exposed by the container is 80. Hence with the –p command, we are mapping the same port
-                    number to the 80 port number on our localhost.</li>
-
-                <li>The –d option is used to run the container in detached mode. This is so that the container can run in
-                    the background.</li>
-
-            </ul>
-            If you go to port 80 of the Docker host in your web browser, you will now see that Apache is up and
-            running.
-            </p>
         </div>
+        </p>
+
+        <h4>2. Creating a blueprint for docker image with python interpreter</h4>
+        <p>
+            Create a file <code>'Dockerfile'</code> (without extension) under <code>'src'</code> folder and add the below lines
+        <div style="background: #c6c8ca; width: 100%;font-family: 'Courier New';font-size: 18px; ">
+            <pre>
+                <code>
+            FROM python:3
+            ADD src /src
+            RUN pip install pystrich
+            CMD [ "python", "./src/my_script.py" ]
+
+                </code>
+            </pre>
+        </div>
+        </p>
+
+        <h4>3. Setting up Docker container as runtime</h4>
+        <div>
+            <img src="../images/pycharm1.png" alt="docker run configuration">
+        </div>
+        <br>
+        <h4>4. Executing the python script on Docker</h4>
+        <p>
+            We will now create a run configuration in PyCharm to execute the python script we created,
+            using the python interpreter running on a Docker image instead of using a local interpreter.
+        </p>
+        <div>
+            <img src="../images/pycharm2.png" alt="docker run configuration">
+        </div>
+        <br>
+        <p><b>Congratulations!</b> You have successfully created and executed your first python program on Docker using Pycharm.
+            If you want to explore more, please follow this link -
+                <a href="https://www.jetbrains.com/help/pycharm/using-docker-as-a-remote-interpreter.html">
+                    Configure an interpreter using Docker</a>
+        </p>
+
     </div>
 
     <div style="height: 30px"></div>
