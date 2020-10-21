@@ -1,0 +1,295 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Virtualization</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+            integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+            crossorigin="anonymous"></script>
+    <!--calling the js file used to make the background image stretch all the way across screen-->
+    <script src="../js/main.js"></script>
+    <!--calling the js file used to make the background image stretch all the way across screen-->
+    <link rel="stylesheet" type="text/css" href="../css/main.css">
+
+
+</head>
+<body>
+
+
+<nav class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container-fluid">
+
+        <ul class="nav navbar-nav">
+            <li class="active"><a href="https://nt27web.github.io/learn-docker-linux-containerization/">Home</a></li>
+            <li class="dropdown">
+                <a class="dropdown-toggle" data-toggle="dropdown" href="#">Topics
+                    <span class="caret"></span></a>
+                <ul class="dropdown-menu">
+                    <li><a href="virtualization.html">Virtualization</a></li>
+                    <li><a href="containerization.html">Containerization</a></li>
+                    <li><a href="comparison.html">Comparison</a></li>
+                </ul>
+            </li>
+            <li><a href="about.html">About</a></li>
+        </ul>
+    </div>
+</nav>
+
+<div>
+    <div class="text-center">
+        <div>
+            <img src="images/virtualization.png" alt="inventionimage" style="horiz-align:center;width: 50%">
+        </div>
+    </div>
+    <div class="jumbotron text-center" style="horiz-align:center;width: 100%">
+        <h1>Virtualization</h1>
+    </div>
+
+    <blockquote class="blockquote">
+        <p class="mb-0">
+        <h3>What is virtualization?</h3>
+
+        <p>Virtualization is technology that allows you to create multiple simulated environments or dedicated resources
+            from a single, physical hardware system. Software called a hypervisor connects directly to that hardware and
+            allows you to split 1 system into separate, distinct, and secure environments known as virtual machines
+            (VMs). These VMs rely on the hypervisor’s ability to separate the machine’s resources from the hardware and
+            distribute them appropriately. Virtualization helps you get the most value from previous investments.
+        </p>
+
+        <p>The physical hardware, equipped with a hypervisor, is called the host, while the many VMs that use its
+            resources are guests. These guests treat computing resources—like CPU, memory, and storage—as a pool of
+            resources that can easily be relocated. Operators can control virtual instances of CPU, memory, storage, and
+            other resources, so guests receive the resources they need when they need them.
+
+        </p>
+
+        <div class="text-center">
+            <img src="images/virtualization1.png" alt="inventionimage" style="horiz-align:center;width: 50%">
+        </div>
+      <br>
+        <p>There are many reasons why people utilize virtualization in computing. To desktop users, the most common use
+            is to be able to run applications meant for a different operating system without having to switch computers
+            or reboot into a different system. For administrators of servers, virtualization also offers the ability to
+            run different operating systems, but perhaps, more importantly, it offers a way to segment a large system
+            into many smaller parts, allowing the server to be used more efficiently by a number of different users or
+            applications with different needs. It also allows for isolation, keeping programs running inside of a
+            virtual machine safe from the processes taking place in another virtual machine on the same host.
+        </p>
+
+        <p><strong>Difference between Traditional Architecture and Virtual Architecture</strong></p>
+
+        <div class="text-center">
+            <img src="images/virtualization2.jpeg" alt="inventionimage" style="horiz-align:center;width: 50%">
+        </div>
+
+        <h3>What is a hypervisor?</h3>
+        <p>A hypervisor is a program for creating and running virtual machines.<br> Hypervisors have traditionally been
+            split into two classes: type one, or "bare metal" hypervisors that run guest virtual machines directly on a
+            system's hardware, essentially behaving as an operating system. Type two, or "hosted" hypervisors behave
+            more like traditional applications that can be started and stopped like a normal program. In modern systems,
+            this split is less prevalent, particularly with systems like KVM. KVM, short for kernel-based virtual
+            machine, is a part of the Linux kernel that can run virtual machines directly, although you can still use a
+            system running KVM virtual machines as a normal computer itself.
+        </p>
+
+        <h3>What is a virtual machine?</h3>
+        <p>A virtual machine is the emulated equivalent of a computer system that runs on top of another system.<br>
+            Virtual
+            machines may have access to any number of resources:
+            <ui>
+                <li>Computing power, through hardware-assisted but limited access to the host machine's CPU and
+                    memory.
+                </li>
+                <li>One or more physical or virtual disk devices for storage.</li>
+                <li>A virtual or real network interface.</li>
+                <li>As well as any devices such as video cards, USB devices, or other hardware that are shared with the
+                    virtual machine.
+                </li>
+            </ui>
+            If the virtual machine is stored on a virtual disk, this is often referred to as a disk image. A disk image
+            may contain the files for a virtual machine to boot, or,
+            it can contain any other specific storage needs.
+        </p>
+        <h3>How virtualization works?</h3>
+        <p>Virtualization describes a technology in which an application, guest operating system (guest OS) or data
+            storage is abstracted away from the true underlying hardware or software. A key use of virtualization
+            technology is server virtualization, which uses a software layer -- called a hypervisor -- to emulate the
+            underlying hardware. This often includes the CPU's memory, input/output (I/O) and network traffic.
+            Hypervisors take the physical resources and separate them so they can be utilized by the virtual
+            environment. They are able to sit on top of an OS or they can be directly installed onto the hardware. The
+            latter is how most enterprises virtualize their systems.</p>
+        <p>The Xen hypervisor is an open source software program that is responsible for managing the low-level
+            interactions that occur between virtual machines (VMs) and the physical hardware. In other words, the Xen
+            hypervisor allows for the simultaneous creation, execution and management of various virtual machines in one
+            physical environment.</p>
+        <p>With the help of the hypervisor, the guest OS, normally interacting with true hardware, is now doing so with
+            a software emulation of that hardware. Often, the guest OS has no idea it's on virtualized hardware. While
+            the performance of this virtual system is not equal to the performance of the operating system running on
+            true hardware, the concept of virtualization works because most guest operating systems and applications
+            don't need the full use of the underlying hardware. This allows for greater flexibility, control and
+            isolation by removing the dependency on a given hardware platform. While initially meant for server
+            virtualization, the concept of virtualization has spread to applications, networks, data and desktops.</p>
+        <div class="text-center">
+            <img src="images/virtualization3.jpg" alt="inventionimage" style="horiz-align:center;width: 50%">
+        </div>
+        <p>The virtualization process follows the steps listed below:</p>
+        <ui>
+            <li>Hypervisors detach the physical resources from their physical environments.</li>
+            <li>Resources are taken and divided, as needed, from the physical environment to the various virtual
+                environments.
+            </li>
+            <li>System users work with and perform computations within the virtual environment.</li>
+            <li>Once the virtual environment is running, a user or program can send an instruction that requires extra
+                resources form the physical environment. In response, the hypervisor relays the message to the physical
+                system and stores the changes. This process will happen at an almost native speed.
+            </li>
+        </ui>
+        <br>
+        <p>The virtual environment is often referred to as a guest machine or virtual machine. The VM acts like a single
+            data file that can be transferred from one computer to another and opened in both. It is expected to perform
+            the same way on every computer.
+        </p>
+        <h2>Types of virtualization</h2>
+     <div class="ux-group" data-ux-layout="stacked">
+     <div class="ux-generic"><h3>Data virtualization</h3></div>
+     <div class="ux-group" data-ux-layout="min-stacked">
+        <div class="ux-image-embed" data-ux-layout-special="float-right">
+            <div class="ux-image-embed-container">
+                <div class="media media-element-container media-default">
+                    <div class="text-center"><img height="217" width="400"
+                         class="media-element  img-align-right file-default"
+                         data-delta="4"
+                         src="images/virtualization4.png"
+                         alt="data virtualization"
+                                                  title="data virtualization"/></div></div>
+            </div>
+        </div>
+        <div class="ux-generic"><p>Data that’s spread all over can be consolidated into a single source. Data
+            virtualization allows companies to treat data as a dynamic supply—providing processing capabilities that can
+            bring together data from multiple sources, easily accommodate new data sources, and transform data according
+            to user needs. Data virtualization tools sit in front of multiple data sources and allows them to be treated
+            as single source, delivering the needed data—in the required form—at the right time to any application or
+            user.</p></div>
+    </div>
+    <div class="ux-generic"><h3>Desktop virtualization</h3></div>
+    <div class="ux-group" data-ux-layout="min-stacked">
+        <div class="ux-image-embed" data-ux-layout-special="float-right">
+            <div class="ux-image-embed-container">
+                <div class="media media-element-container media-default">
+                    <div class="text-center"><img height="217" width="400"
+                         class="media-element  img-align-right file-default"
+                         data-delta="5"
+                         src="images/virtualization5.png"
+                         alt="desktop virtualization"
+                                                  title="desktop virtualization"/></div></div>
+            </div>
+        </div>
+        <div class="ux-generic"><p>Easily confused with operating system virtualization—which allows you to deploy
+            multiple operating systems on a single machine—desktop virtualization allows a central administrator (or
+            automated administration tool) to deploy simulated desktop environments to hundreds of physical machines at
+            once. Unlike traditional desktop environments that are physically installed, configured, and updated on each
+            machine, desktop virtualization allows admins to perform mass configurations, updates, and security checks
+            on all virtual desktops.</p></div>
+    </div>
+    <div class="ux-generic"><h3>Server virtualization</h3></div>
+    <div class="ux-group" data-ux-layout="min-stacked">
+        <div class="ux-image-embed" data-ux-layout-special="float-right">
+            <div class="ux-image-embed-container">
+                <div class="media media-element-container media-default">
+                    <div class="text-center"><img alt="Server virtualization"
+                         title="How virtualization works"
+                         height="217" width="400"
+                         class="media-element  img-align-right file-default"
+                         data-delta="6"
+                         src="images/virtualization6.png"/>
+                    </div></div>
+            </div>
+        </div>
+        <div class="ux-generic"><p>Servers are computers designed to process a high volume of specific tasks really well
+            so other computers—like laptops and desktops—can do a variety of other tasks. Virtualizing a server lets it
+            to do more of those specific functions and involves partitioning it so that the components can be used to
+            serve multiple functions.</p></div>
+    </div>
+
+    <div class="ux-generic"><h3>Operating system virtualization</h3></div>
+    <div class="ux-group" data-ux-layout="min-stacked">
+        <div class="ux-image-embed" data-ux-layout-special="float-right">
+            <div class="ux-image-embed-container">
+                <div class="media media-element-container media-default">
+                    <div class="text-center"><img alt="Operating system virtualization"
+                         title="Operating system virtualization"
+                         height="431" width="400"
+                         class="media-element img-align-right file-default"
+                         data-delta="7"
+                         src="images/virtualization7.png"/>
+                    </div></div>
+            </div>
+        </div>
+        <div class="ux-generic"><p>Operating system virtualization happens at the
+                kernel the central task managers of operating
+            systems. It’s a useful way to run Linux and Windows environments side-by-side. Enterprises can also push
+            virtual operating systems to computers, which:</p>
+            <ul>
+                <li>Reduces bulk hardware costs, since the computers don’t require such high out-of-the-box
+                    capabilities.
+                </li>
+                <li>Increases security, since all virtual instances can be monitored and isolated.</li>
+                <li>Limits time spent on IT services like software updates.</li>
+            </ul>
+        </div>
+     </div>
+
+     <div class="ux-generic"><h3>Network functions virtualization</h3></div>
+     <div class="ux-group" data-ux-layout="min-stacked">
+        <div class="ux-image-embed" data-ux-layout-special="float-right">
+            <div class="ux-image-embed-container">
+                <div class="media media-element-container media-default">
+                    <div class="text-center"><img alt="Network function virtualization"
+                         title="Network function virtualization"
+                         height="337" width="400"
+                         class="media-element img-align-right file-default"
+                         data-delta="8"
+                         src="images/virtualization8.png"/>
+                    </div></div>
+            </div>
+        </div>
+        <div class="ux-generic"><p>Network functions virtualization (NFV) separates a network's key functions (like
+            directory services, file sharing, and IP configuration) so they can be distributed among environments. Once
+            software functions are independent of the physical machines they once lived on, specific functions can be
+            packaged together into a new network and assigned to an environment. Virtualizing networks reduces the
+            number of physical components—like switches, routers, servers, cables, and hubs—that are needed to create
+            multiple, independent networks, and it’s particularly popular in the telecommunications industry.</p></div>
+      </div></div></blockquote>
+
+            <footer class="page-footer">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-8 col-md-8 col-sm-12">
+                            <h6 class="text-uppercase font-weight-bold">Additional Information</h6>
+                            <p></p>
+                            <p>This site was designed and developed by Nayana K and  Sourav Halepalya Aswathnarayan
+                                <br/> as their masters assignment for the course Web development (IS-601)</p>
+                        </div>
+                        <div class="col-lg-4 col-md-4 col-sm-12">
+                            <h6 class="text-uppercase font-weight-bold">Contact</h6>
+                            <p>New Jersey Institute of Technology
+                                <br/>
+                                323 Dr Martin Luther King Jr Blvd, Newark, NJ 07102
+                                <br/>kwilliam@njit.edu
+                                <br/>+(973) 596-3000
+                            </p>
+                        </div>
+                    </div>
+                    <div style="height: 20px"></div>
+                    <div class="footer-copyright text-center">© 2020 Copyright:
+                        <a href="https://github.com/nt27web/learn-docker-linux-containerization">https://github.com/nt27web/learn-docker-linux-containerization</a>
+                    </div>
+                </div>
+            </footer>
+        </div>
+</body>
+</html>
